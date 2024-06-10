@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.container{
+   min-height: 100vh;
+   width: 100%;
+   display: flex;
+
+}
+.nav{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+}
+.nav li{
+    list-style: none;
+}
+.nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    position:relative ;
+}
+.left-container,.right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+}
+.left-container{
+background: #232525;
+width:70%;
+padding-left: 3rem;
+}
+.right-container{
+    
+background:linear-gradient(-45deg,#3877FF,#232525 70%);
+width: 30%;
+}
+.icons .fa-brands{
+    color: #bbb;
+    font-size: 1.7rem;
+
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+}
+.content{
+    margin-left: 4rem;
+}
+.content .intro{
+    font-size: 1.5rem;
+    color:white;
+
+}
+.content .intro span{
+    color: #5DB9EE
+}
+.content h1{
+    font-size: 4rem;
+    color: #5DB9EE;
+    }
+.content .details{
+    font-size: 1.1rem;
+    color: white;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+.btn-container button{
+border: .1rem solid #5DB9EE;
+font-size: 1.1rem;
+padding: .8rem 1.5rem;
+border-radius: .5rem;
+}
+button:nth-child(1){
+    background: #5DB9EE;
+    color: white;
+    font-size: bolder;
+    cursor: pointer;
+    transition: .3s ease;
+
+}
+button:nth-child(2){
+    background-color: #5DB9EE;
+    color:white;
+    font-size: bolder;
+    margin-left:1.5rem;
+    cursor: pointer;
+}
+button:nth-child(1):hover{
+background: transparent;
+color:#5DB9EE
+}
+button:nth-child(2):hover{
+    background: transparent;
+    color:#5DB9EE;
+    }
+    .icons .fa-brands:hover{
+        cursor: pointer;
+        background: linear-gradient(white, #3877FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .design .circle{
+        aspect-ratio: 1;
+        position: absolute;
+        border-radius: 50%;
+        top:50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+
+    }
+    .circle:nth-child(1){
+        background:linear-gradient(90deg, transparent 50% , #232525 50%);
+        width: 38rem;
+    }
+    .circle:nth-child(2){
+        
+        width: 30rem;
+        background-image: url(profile/nitish.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border: 1rem solid white;
+        box-shadow: 0 0 1rem white,
+         inset 0 0 1rem white,
+         0 0 2rem #3877FF,
+         inset 0 0 2rem #3877FF,
+         0 0 4rem #3877FF,
+         inset 0 0 4rem #3877FF;
+         
+
+    }
+    .nav li a::after,nav .active::after{
+        content:"" ;
+        position: absolute;
+        background: white;
+        width: 100%;
+        height: .1rem;
+        left: 0;
+        bottom: -5px;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform .5s;
+    }
+    .nav li a:hover::after,nav .active::after{
+transform: scaleX(1);
+transform-origin: bottom left;
+    }
